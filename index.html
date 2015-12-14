@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Est-ce que tu doutes ?</title>
+    <style media="screen">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    html{
+      height: 100%;
+      overflow: hidden;
+    }
+    body{
+      opacity: 0;
+      height: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      line-height: 1;
+      text-transform: uppercase;
+      -webkit-transition: opacity 250ms ease-in;
+      transition: opacity 250ms ease-in;
+    }
+    h1{
+      font-size: 3em;
+      letter-spacing: 0.05em;
+      padding-bottom: 20px;
+          text-align: center;
+      -webkit-transform: scale(1.6);
+              transform: scale(1.6);
+    }
+    h1, p{
+      -webkit-transition: all 250ms ease-in;
+      transition: all 250ms ease-in;
+    }
+    p.center{
+      font-size: 2em;
+      -webkit-transform: translateY(150px);
+              transform: translateY(150px);
+    }
+    .wf-lobster-n4-active h1{
+      font-family: 'Lobster', serif;
+    }
+    .wf-active body{
+      opacity: 1;
+    }
+    .wf-active h1{
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    .wf-active p.center{
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Est-ce que tu doutes ?</h1>
+    <script type="text/javascript">
+
+      /* fonts */
+      WebFontConfig = {
+        google: { families: [ 'Lobster::latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+
+      /* fonts */
+      function getRandomArbitrary(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+      (function (){
+        var rand = getRandomArbitrary(0,2);
+        console.log(rand);
+        var string = null;
+        var body = document.querySelector('body');
+        if(rand < 1 ){
+          string = "oui";
+        } else {
+          string = "non";
+        }
+        var p = document.createElement('p');
+        p.classList.add('center');
+        p = document.body.appendChild(p);
+        p.innerHTML = string;
+
+      })();
+
+    </script>
+  </body>
+</html>
